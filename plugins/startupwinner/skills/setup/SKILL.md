@@ -19,7 +19,7 @@ README, TODO.md, docs, package files, and deployment config (vercel.json, wrangl
 Some things only I know. Ask them all in ONE short message, numbered, and put what you found next to each so I can just confirm ("I found: …, right?"):
 
 1. What the product does, the problem it solves and for whom (one sentence each).
-2. What to track: (a) the web app only, (b) the mobile apps only (iOS and Android), or (c) both. This sets `project.type` (web, mobile, web+mobile) and which checklist items apply; suggest the one the code points to.
+2. What to track: (a) the web app, (b) the Android app, (c) the iOS app, (d) only the mobile apps (iOS and Android), or (e) all of them (web, iOS and Android). Other mixes are fine too, e.g. web and iOS. This sets `project.type` (a: web, b: android, c: ios, d: mobile, e: web+mobile, web and iOS: web+ios) and which checklist items apply; suggest the one the code points to.
 3. Target launch date per platform, or "none yet".
 4. Pricing: free, paid, how much (or "not decided").
 5. Is it live anywhere already? The site's address, App Store or Play listing.
@@ -37,7 +37,7 @@ project:
   id: my-app                 # slug
   name: My App
   tagline: One line          # optional
-  type: web+mobile           # web | mobile | web+mobile | api | extension | other
+  type: web+mobile           # web | ios | android | mobile (iOS + Android) | web+mobile | web+ios | web+android | api | extension | other
 stage: mvp                   # idea | validate | mvp | prelaunch | ship | launch | grow | paused | killed
 targets:                     # optional target dates per platform, YYYY-MM-DD
   web: 2026-12-01
@@ -77,7 +77,7 @@ TODO.md stays the source of truth. Tag each checkbox that matches a methodology 
 - `[x]` done, `[ ]` to do, `[~]` in progress. One comment per tag; a line can carry several, and one item can be tagged on several lines (it is done only when all are checked).
 - `skipped="reason"` for items that don't apply. `blocked="reason" since=YYYY-MM-DD` only for items waiting on someone else; never guess blocked.
 - Don't reword, reorder or re-check existing lines; only append tags.
-- Only tag items for the platforms in `project.type` (web items for web, iOS and Android items for mobile).
+- Only tag items for the platforms in `project.type` (web items for web, iOS items for iOS, Android items for Android, shared mobile items for either).
 
 ## 5. Add what's missing
 
