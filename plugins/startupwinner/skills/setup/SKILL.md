@@ -16,7 +16,7 @@ README, TODO.md, docs, package files, and deployment config (vercel.json, wrangl
 
 ## 2. Interview me (one message, then wait)
 
-Some things only I know. Ask them all in ONE short message, numbered, and put what you found next to each so I can just confirm ("I found: …, right?"):
+Finish all your reading first, then write this message once. Some things only I know. Ask them all in ONE short message, numbered, and put what you found next to each so I can just confirm ("I found: …, right?"):
 
 1. What the product does, the problem it solves and for whom (one sentence each).
 2. What to track: (a) the web app, (b) the Android app, (c) the iOS app, (d) only the mobile apps (iOS and Android), or (e) all of them (web, iOS and Android). Other mixes are fine too, e.g. web and iOS. This sets `project.type` (a: web, b: android, c: ios, d: mobile, e: web+mobile, web and iOS: web+ios) and which checklist items apply; suggest the one the code points to.
@@ -47,6 +47,7 @@ market:                      # optional, one sentence each
   problem: …
   target_user: …
   pricing: …
+  differentiator: …          # one sentence: why people pick this over the competitors
 deploy:                      # optional, only what exists
   web: { url: https://…, host: vercel }   # vercel | cloudflare | netlify | railway | fly | other
   ios: { bundle_id: …, app_store_id: "…" }
@@ -57,8 +58,15 @@ services:                    # every paid or free dependency you can find
   # cost: null when unknown; period: month | year | one_time | usage
 social:                      # optional
   - { platform: x, handle: … }
-competitors:                 # optional, from the repo's own research
-  - { name: …, url: …, notes: … }
+competitors:                 # optional: only from the repo's own research docs (/startupwinner:research does the web research)
+  - name: …
+    url: https://…
+    pricing: "Free; Pro $5/mo"   # their public prices
+    features: [one, two, three]   # the 3 to 6 that matter
+    strengths: …
+    weaknesses: …
+    our_edge: …
+    checked_at: YYYY-MM-DD
 ```
 
 Rules: no secrets or keys anywhere in this file. Market, targets, type and deploy come from my answers and the repository. Stage is project-wide: set it to the first stage whose exit isn't met once TODO.md is tagged (idea: both items done; validate: a demand signal and the differentiator; mvp: the core flow working on a preview deploy; prelaunch: every item done or skipped; ship: every platform live; launch: launched on at least one channel; then grow). The dashboard checks the same rule.
@@ -83,7 +91,8 @@ TODO.md stays the source of truth. Tag each checkbox that matches a methodology 
 
 For every applicable item with no matching line:
 - if the repository shows it is already done, add a checked line with the evidence (a file, a doc, a config) in a section "StartUpWinner methodology" under the done part of TODO.md;
-- otherwise add an open line, in the section where it belongs, ending with "(new, StartUpWinner, YYYY-MM-DD)".
+- otherwise add an open line, in the section where it belongs: the text, then "(new, StartUpWinner, YYYY-MM-DD)", then the tag last.
+- Items marked [automatic] are ticked by the dashboard itself (uptime, deploys, payments, the stores, the opportunity score once 3+ competitors have pricing and features): tag them on an open line, never tick them, and don't plan work to "compute" them.
 If there is no TODO.md, create one with sections for the current work, what's done, and later ideas, in the same style.
 
 Never mark something done without evidence: a file, a config, or my answer in the interview. Items marked [ask me] are ticked only when I said yes ("done, per you, YYYY-MM-DD" as the evidence), skipped when I said they don't apply, and open otherwise.
@@ -92,14 +101,14 @@ Never mark something done without evidence: a file, a config, or my answer in th
 
 idea
 - `idea.problem`: Problem and target user written in project.yaml
-- `idea.manifest`: .startupwinner/ created and committed
+- `idea.manifest`: .startupwinner/ created and committed [automatic]
 
 validate
 - `validate.competitors_mapped`: 3+ competitors listed with features and pricing
 - `validate.differentiator`: One-sentence "why us instead of X" [ask me]
 - `validate.demand_signal`: At least one real signal: waitlist sign-ups, 5 user conversations, pre-sales, search volume [ask me]
 - `validate.pricing`: Pricing hypothesis written
-- `validate.opportunity_score`: Opportunity score computed (v1 feature)
+- `validate.opportunity_score`: Opportunity score: the dashboard computes it once 3+ competitors have pricing and features [automatic]
 
 mvp
 - `mvp.repo_from_template`: Started from the StartUpWinner template (or equivalent stack documented)
@@ -107,38 +116,38 @@ mvp
 - `mvp.core_flow`: The one core flow works end to end [ask me]
 - `mvp.auth`: Sign up / sign in / sign out
 - `mvp.data`: Database with migrations in the repo
-- `mvp.preview_deploy`: Preview deploy on every push
+- `mvp.preview_deploy`: Preview deploy on every push [automatic]
 
 prelaunch
-- `prelaunch.domain`: Custom domain with HTTPS
+- `prelaunch.domain`: Custom domain with HTTPS [automatic]
 - `prelaunch.payments`: Live-mode payments + webhook handling (subscription created / failed / cancelled)
 - `prelaunch.transactional_email`: Sign-up, password reset and receipt emails from your domain (SPF/DKIM set)
 - `prelaunch.analytics`: Product analytics on key events
 - `prelaunch.error_tracking`: Error tracking wired up (frontend + backend)
-- `prelaunch.legal`: Privacy policy + terms pages live
+- `prelaunch.legal`: Privacy policy + terms pages live [automatic]
 - `prelaunch.account_deletion`: Users can delete their account (Apple requires this in-app if accounts exist)
-- `prelaunch.landing`: Landing page: promise, pricing, call to action
+- `prelaunch.landing`: Landing page: promise, pricing, call to action [automatic]
 - `prelaunch.backups`: Database backups on [ask me]
 
 ship
-- `web.production`: Production deploy on the custom domain (web only)
-- `web.uptime`: Uptime monitor configured (web only)
-- `web.first_payment`: First real payment received (web only)
+- `web.production`: Production deploy on the custom domain (web only) [automatic]
+- `web.uptime`: Uptime monitor configured (web only) [automatic]
+- `web.first_payment`: First real payment received (web only) [automatic]
 - `mobile.app_config`: One codebase (Expo/EAS) with app.json/eas.json, icons, splash (iOS + Android only)
 - `mobile.store_assets`: Screenshots per device size, description, keywords, support URL (iOS + Android only) [ask me]
 - `mobile.iap`: In-app purchases for digital goods (stores require their billing; RevenueCat recommended) (iOS + Android only)
 - `mobile.ios.dev_account`: Apple Developer Program ($99/yr) (iOS only) [ask me]
-- `mobile.ios.app_record`: App record in App Store Connect, bundle ID registered (iOS only)
+- `mobile.ios.app_record`: App record in App Store Connect, bundle ID registered (iOS only) [automatic]
 - `mobile.ios.privacy_labels`: App Privacy ("nutrition label") answers filled (iOS only) [ask me]
-- `mobile.ios.testflight`: Build on TestFlight, tested by 3+ people (iOS only)
-- `mobile.ios.review_submitted`: Submitted for App Review (iOS only)
-- `mobile.ios.live`: Approved and live (iOS only)
+- `mobile.ios.testflight`: Build on TestFlight, tested by 3+ people (iOS only) [automatic]
+- `mobile.ios.review_submitted`: Submitted for App Review (iOS only) [automatic]
+- `mobile.ios.live`: Approved and live (iOS only) [automatic]
 - `mobile.android.dev_account`: Google Play Console ($25 one-time, identity verification) (Android only) [ask me]
-- `mobile.android.internal_testing`: Build uploaded to the internal testing track (Android only)
+- `mobile.android.internal_testing`: Build uploaded to the internal testing track (Android only) [automatic]
 - `mobile.android.data_safety`: Data safety form filled (Android only) [ask me]
-- `mobile.android.closed_testing`: Closed test with 12+ testers for 14+ days (required for new personal accounts) (Android only)
-- `mobile.android.production_access`: Production access granted (Android only)
-- `mobile.android.live`: Live on Play Store (Android only)
+- `mobile.android.closed_testing`: Closed test with 12+ testers for 14+ days (required for new personal accounts) (Android only) [automatic]
+- `mobile.android.production_access`: Production access granted (Android only) [automatic]
+- `mobile.android.live`: Live on Play Store (Android only) [automatic]
 
 launch
 - `launch.channels`: 3 launch channels chosen (Product Hunt, Reddit, X, Hacker News, niche communities, newsletter) [ask me]
