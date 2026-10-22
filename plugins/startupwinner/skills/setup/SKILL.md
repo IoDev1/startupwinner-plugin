@@ -19,7 +19,7 @@ README, TODO.md, docs, package files, and deployment config (vercel.json, wrangl
 Some things only I know. Ask them all in ONE short message, numbered, and put what you found next to each so I can just confirm ("I found: …, right?"):
 
 1. What the product does, the problem it solves and for whom (one sentence each).
-2. Platforms: web, iOS, Android, or a mix.
+2. What to track: (a) the web app only, (b) the mobile apps only (iOS and Android), or (c) both. This sets `project.type` (web, mobile, web+mobile) and which checklist items apply; suggest the one the code points to.
 3. Target launch date per platform, or "none yet".
 4. Pricing: free, paid, how much (or "not decided").
 5. Is it live anywhere already? The site's address, App Store or Play listing.

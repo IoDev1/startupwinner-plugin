@@ -9,7 +9,7 @@ Wherever these instructions say YYYY-MM-DD, use today's date. "The current repos
 Start a new product from the StartUpWinner starter (IoDev1/startupwinner-starter): Next.js on Vercel, Supabase, Stripe, Resend, PostHog, Sentry and an Expo app, with a TODO.md already tagged for the StartUpWinner dashboard.
 
 ## 1. Ask me first
-Ask, in one message: the product name, one sentence on the problem and who has it, web and/or mobile, the price idea, and target launch dates per platform (or "none yet"). Wait for my answers.
+Ask, in one message: the product name, one sentence on the problem and who has it, what to build and track ((a) web app only, (b) mobile apps only, or (c) both), the price idea, and target launch dates per platform (or "none yet"). Wait for my answers.
 
 ## 2. Create the repo
 Pick a repo name from the product name (lowercase, dashes). If the GitHub CLI is installed and signed in (`gh auth status`), run:
