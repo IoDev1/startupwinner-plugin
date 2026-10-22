@@ -1,0 +1,14 @@
+{
+  "name": "startupwinner-marketplace",
+  "description": "StartUpWinner's Claude Code plugin",
+  "owner": {
+    "name": "IoDev1"
+  },
+  "plugins": [
+    {
+      "name": "startupwinner",
+      "source": "./plugins/startupwinner",
+      "description": "Start a new product from the starter, set up a repo for the StartUpWinner dashboard, research its competitors and prepare the launch"
+    }
+  ]
+}
