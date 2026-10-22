@@ -8,6 +8,7 @@ Commands for [StartUpWinner](https://start-up-winner.vercel.app), the dashboard 
 | `/startupwinner:setup` | Sets up the current repo: writes `.startupwinner/project.yaml` and tags TODO.md with the methodology items |
 | `/startupwinner:research` | Researches competitors on the web for the Market tab |
 | `/startupwinner:launch` | Writes ready-to-paste launch copy for Product Hunt, Show HN, Reddit and more into `launch/` |
+| `/startupwinner:focus` | Agrees the one priority for this week with you, from the dashboard's numbers, and records it |
 
 None of them pushes or posts anything; they show you the diff first.
 

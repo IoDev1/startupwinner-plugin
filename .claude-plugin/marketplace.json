@@ -8,7 +8,7 @@
     {
       "name": "startupwinner",
       "source": "./plugins/startupwinner",
-      "description": "Start a new product from the starter, set up a repo for the StartUpWinner dashboard, research its competitors and prepare the launch"
+      "description": "Start a new product from the starter, set up a repo for the StartUpWinner dashboard, research its competitors, prepare the launch and pick the week's focus"
     }
   ]
 }
