@@ -8,15 +8,17 @@ Wherever these instructions say YYYY-MM-DD, use today's date. "The current repos
 
 Set up this repository (the current repository) for StartUpWinner, a dashboard that reads it from GitHub (read-only) and shows the project's stage, web / iOS / Android status, blocked and late items, and backlog.
 
-Do not commit or push. When you are done, show me the diff and list every choice you weren't sure about, so I can review before I commit.
+Do not commit or push. When you are done, show me the diff and list every choice you weren't sure about, so I can review before I commit. On a re-run, also list what changed since the last setup.
 
 ## 1. Read the repository
 
 README, TODO.md, docs, package files, and deployment config (vercel.json, wrangler.toml, netlify.toml, app.json / eas.json, Xcode or Gradle projects, .env.example, Stripe or RevenueCat usage). Never read or copy real secrets (.env, .env.local, keys).
 
+**Is this a re-run?** If .startupwinner/project.yaml already exists, the project was set up before and this run refreshes it: start from that file and the tags already in TODO.md, keep every answer I gave last time, and look for what changed since (new files, services, platforms, store records, items now done). Re-check every methodology item; tick the ones that now have evidence, and never un-tick or remove anything without listing it for me.
+
 ## 2. Interview me (one message, then wait)
 
-Finish all your reading first, then write this message once. Some things only I know. Ask them all in ONE short message, numbered, and put what you found next to each so I can just confirm ("I found: …, right?"):
+Finish all your reading first, then write this message once. On a re-run, ask only what's missing in project.yaml or what the repository suggests has changed ("you now have an eas.json: still iOS only?"), and skip the interview when nothing is. Some things only I know. Ask them all in ONE short message, numbered, and put what you found next to each so I can just confirm ("I found: …, right?"):
 
 1. What the product does, the problem it solves and for whom (one sentence each).
 2. What to track: (a) the web app, (b) the Android app, (c) the iOS app, (d) only the mobile apps (iOS and Android), or (e) all of them (web, iOS and Android). Other mixes are fine too, e.g. web and iOS. This sets `project.type` (a: web, b: android, c: ios, d: mobile, e: web+mobile, web and iOS: web+ios) and which checklist items apply; suggest the one the code points to.
