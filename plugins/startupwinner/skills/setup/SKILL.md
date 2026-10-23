@@ -154,7 +154,7 @@ ship
 - `web.production`: Production deploy on the custom domain (web only) [dashboard checks]
 - `web.uptime`: Uptime monitor configured (web only) [dashboard checks]
 - `web.first_payment`: First real payment received (web only) [dashboard checks]
-- `mobile.app_config`: One codebase (Expo/EAS) with app.json/eas.json, icons, splash (iOS + Android only)
+- `mobile.app_config`: App project ready for the stores: Expo/EAS (app.json/eas.json), or a native Xcode / Gradle / Flutter project; real bundle id, icons and splash (iOS + Android only)
 - `mobile.store_assets`: Screenshots per device size, description, keywords, support URL (iOS + Android only) [ask me]
 - `mobile.iap`: In-app purchases for digital goods (stores require their billing; RevenueCat recommended) (iOS + Android only)
 - `mobile.ios.dev_account`: Apple Developer Program ($99/yr) (iOS only) [ask me]
