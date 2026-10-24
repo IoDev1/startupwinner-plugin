@@ -17,14 +17,14 @@ README, docs, the landing page copy, .startupwinner/project.yaml (project, marke
 If `launch.channels` in project.yaml is empty, propose the 3 to 5 channels where the target user actually is, from: `product_hunt`, `show_hn`, `reddit`, `x`, `linkedin`, `indie_hackers`, `directories`, `newsletter`, `app_stores` (mobile apps only). Explain each choice in one line and ask me before writing them. Also ask me for the launch date if `launch.date` is missing (never guess it).
 
 ## 3. Write the kit
-Create `launch/` at the repo root with one Markdown file per chosen channel (`launch/product-hunt.md`, `launch/show-hn.md`, …) plus `launch/week.md` for the posts after launch day (day 1 thank-you, day 3 lessons, day 7 recap). In each file:
+Create `.startupwinner/launch/` with one Markdown file per chosen channel (`.startupwinner/launch/product-hunt.md`, `.startupwinner/launch/show-hn.md`, …) plus `.startupwinner/launch/week.md` for the posts after launch day (day 1 thank-you, day 3 lessons, day 7 recap). In each file:
 - the copy, ready to paste, in the channel's own voice and within its limits (Product Hunt tagline 60 characters, Show HN title 80, App Store subtitle 30, Play short description 80, X posts 280);
 - the channel's checklist (images, video, accounts) with what's already in the repo ticked;
 - for Reddit, the specific subreddits where the target user is, with each one's self-promotion rule.
 Write like a person, not an ad: concrete, no hype words, no invented numbers or quotes. Leave [brackets] where only I know the answer.
 
-## 4. Update project.yaml and TODO.md
+## 4. Update project.yaml and the checklist
 - Set `launch.date` (from me) and `launch.channels` (the ids above). Keep every other part of project.yaml.
-- In TODO.md, if they aren't there yet, add open lines for the launch items, tagged `<!-- sw:launch.channels -->`, `<!-- sw:launch.assets -->`, `<!-- sw:launch.executed -->`, `<!-- sw:launch.feedback_loop -->`. Check `launch.channels` once 3 are chosen; leave the others to me.
+- In `.startupwinner/checklist.md`, if they aren't there yet, add open lines for the launch items, tagged `<!-- sw:launch.channels -->`, `<!-- sw:launch.assets -->`, `<!-- sw:launch.executed -->`, `<!-- sw:launch.feedback_loop -->`. Check `launch.channels` once 3 are chosen; leave the others to me. Write only inside `.startupwinner/`: never edit TODO.md or other project files.
 
 After launching, I add each live post to `launch.posted` (`- { channel: product_hunt, url: https://…, date: YYYY-MM-DD }`) and the dashboard ticks launch.executed. Today is YYYY-MM-DD.

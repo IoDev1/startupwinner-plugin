@@ -41,4 +41,4 @@ competitors:
 Also set `market.differentiator`: one sentence on why people pick this product over all of them. Keep every other part of project.yaml as it is.
 
 ## 4. Tick the checklist
-If TODO.md tags `validate.competitors_mapped`, check it ([x]) once 3 or more competitors have pricing and features. Don't change anything else in TODO.md.
+In `.startupwinner/checklist.md`, check `validate.competitors_mapped` ([x], "competitors in .startupwinner/project.yaml" as the evidence) once 3 or more competitors have pricing and features. Write only inside `.startupwinner/`: never edit TODO.md or other project files. (No checklist.md yet? Say so: `/startupwinner:setup` creates it.)

@@ -30,4 +30,4 @@ focus:
   done_when: something checkable by the end of the week
 ```
 
-If the priority matches an open line in TODO.md that has no priority label yet, put `**P1**` right after its checkbox (`- [ ] **P1** …`). Show me the diff. Today is YYYY-MM-DD.
+Write only inside `.startupwinner/`: never edit TODO.md or other project files. Show me the diff. Today is YYYY-MM-DD.

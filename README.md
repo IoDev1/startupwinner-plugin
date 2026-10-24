@@ -5,7 +5,7 @@ Commands for [StartUpWinner](https://start-up-winner.vercel.app), the dashboard 
 | Command | What it does |
 |---|---|
 | `/startupwinner:new` | Starts a new product from the [starter](https://github.com/IoDev1/startupwinner-starter): creates the repo and fills in its name, pitch and dates |
-| `/startupwinner:setup` | Sets up the current repo: writes `.startupwinner/project.yaml` and tags TODO.md with the methodology items |
+| `/startupwinner:setup` | Sets up the current repo: interviews you and writes everything in `.startupwinner/` (project file, checklist, rules, competitors), plus one line in `CLAUDE.md` |
 | `/startupwinner:research` | Researches competitors on the web for the Market tab |
 | `/startupwinner:launch` | Writes ready-to-paste launch copy for Product Hunt, Show HN, Reddit and more into `launch/` |
 | `/startupwinner:focus` | Agrees the one priority for this week with you, from the dashboard's numbers, and records it |
