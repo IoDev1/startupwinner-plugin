@@ -39,7 +39,7 @@ competitors:
     checked_at: YYYY-MM-DD
 ```
 
-Also set `market.differentiator`: one sentence on why people pick this product over all of them. Keep every other part of project.yaml as it is.
+Also set `market.differentiator`: one sentence on why people pick this product over all of them. Keep every other part of project.yaml as it is. Put any text that contains `: ` or ` #` in quotes, so the file stays valid YAML (an invalid file stops the dashboard from syncing).
 
 ## 4. Tick the checklist
 In `.startupwinner/checklist.md`, check `validate.competitors_mapped` ([x], "competitors in .startupwinner/project.yaml" as the evidence) once 3 or more competitors have pricing and features. Write only inside `.startupwinner/`: never edit TODO.md or other project files. (No checklist.md yet? Say so: `/startupwinner:setup` creates it.)

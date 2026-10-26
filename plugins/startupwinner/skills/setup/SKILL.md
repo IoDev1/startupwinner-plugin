@@ -118,7 +118,7 @@ competitors:
     checked_at: YYYY-MM-DD
 ```
 
-Also set `market.differentiator`: one sentence on why people pick this product over all of them. Keep every other part of project.yaml as it is. If I gave a differentiator in the interview, keep my words; otherwise propose one from what you found, and list it among the choices you weren't sure about.
+Also set `market.differentiator`: one sentence on why people pick this product over all of them. Keep every other part of project.yaml as it is. Put any text that contains `: ` or ` #` in quotes, so the file stays valid YAML (an invalid file stops the dashboard from syncing). If I gave a differentiator in the interview, keep my words; otherwise propose one from what you found, and list it among the choices you weren't sure about.
 
 Then, in .startupwinner/checklist.md, check `validate.competitors_mapped` ([x], with "competitors in .startupwinner/project.yaml" as the evidence) once 3 or more competitors have pricing and features, and `validate.differentiator` only if I confirmed one. When you show me the diff, also list the sources you used.
 
