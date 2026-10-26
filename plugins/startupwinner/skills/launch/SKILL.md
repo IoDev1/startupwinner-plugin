@@ -14,7 +14,7 @@ Do not commit or push, and don't post anything anywhere. When you are done, show
 README, docs, the landing page copy, .startupwinner/project.yaml (project, market, competitors, launch) and TODO.md, so you know what the product does, for whom, at what price, and how it differs from the competitors.
 
 ## 2. Choose
-If `launch.channels` in project.yaml is empty, propose the 3 to 5 channels where the target user actually is, from: `product_hunt`, `show_hn`, `reddit`, `x`, `linkedin`, `indie_hackers`, `directories`, `newsletter`, `app_stores` (mobile apps only). Explain each choice in one line and ask me before writing them. Also ask me for the launch date if `launch.date` is missing (never guess it).
+If `launch.channels` in project.yaml is empty, propose the 1 or 2 channels where the buyers already are (where they gather or search, or where I already have an audience), from: `product_hunt`, `show_hn`, `reddit`, `x`, `linkedin`, `indie_hackers`, `directories`, `newsletter`, `app_stores` (mobile apps only). Explain each choice in one line, name one backup, and ask me before writing them. Builders who shipped agree: one or two channels done well beat many done thinly. Also ask me for the launch date if `launch.date` is missing (never guess it).
 
 ## 3. Write the kit
 Create `.startupwinner/launch/` with one Markdown file per chosen channel (`.startupwinner/launch/product-hunt.md`, `.startupwinner/launch/show-hn.md`, …) plus `.startupwinner/launch/week.md` for the posts after launch day (day 1 thank-you, day 3 lessons, day 7 recap). In each file:
@@ -25,6 +25,6 @@ Write like a person, not an ad: concrete, no hype words, no invented numbers or 
 
 ## 4. Update project.yaml and the checklist
 - Set `launch.date` (from me) and `launch.channels` (the ids above). Keep every other part of project.yaml.
-- In `.startupwinner/checklist.md`, if they aren't there yet, add open lines for the launch items, tagged `<!-- sw:launch.channels -->`, `<!-- sw:launch.assets -->`, `<!-- sw:launch.executed -->`, `<!-- sw:launch.feedback_loop -->`. Check `launch.channels` once 3 are chosen; leave the others to me. Write only inside `.startupwinner/`: never edit TODO.md or other project files.
+- In `.startupwinner/checklist.md`, if they aren't there yet, add open lines for the launch items, tagged `<!-- sw:launch.channels -->`, `<!-- sw:launch.assets -->`, `<!-- sw:launch.executed -->`, `<!-- sw:launch.feedback_loop -->`. Check `launch.channels` once I've agreed the channels; leave the others to me. Write only inside `.startupwinner/`: never edit TODO.md or other project files.
 
 After launching, I add each live post to `launch.posted` (`- { channel: product_hunt, url: https://…, date: YYYY-MM-DD }`) and the dashboard ticks launch.executed. Today is YYYY-MM-DD.

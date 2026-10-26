@@ -198,7 +198,7 @@ ship
 - `mobile.android.live`: Live on Play Store (Android only) [dashboard checks]
 
 launch
-- `launch.channels`: 3 launch channels chosen (Product Hunt, Reddit, X, Hacker News, niche communities, newsletter) [ask me]
+- `launch.channels`: 1 or 2 launch channels where your buyers already are (Product Hunt, Show HN, Reddit, X, a niche community, a newsletter) [ask me]
 - `launch.assets`: Demo video/GIF, launch post copy [ask me]
 - `launch.executed`: Launched on at least one channel [ask me]
 - `launch.feedback_loop`: Feedback channel (email, Discord, in-app) monitored [ask me]
