@@ -152,7 +152,7 @@ validate
 - `validate.differentiator`: One-sentence "why us instead of X" [ask me]
 - `validate.demand_signal`: At least one real signal: waitlist sign-ups, 5 user conversations, pre-sales, search volume [ask me]
 - `validate.pricing`: Pricing hypothesis written
-- `validate.opportunity_score`: Opportunity score: the dashboard computes it once 3+ competitors have pricing and features [dashboard checks]
+- `validate.opportunity_score`: Opportunity score final: the dashboard shows it from day one, provisional until 3+ competitors have pricing and features [dashboard checks]
 
 mvp
 - `mvp.repo_from_template`: Started from the StartUpWinner template (or equivalent stack documented)
