@@ -9,6 +9,10 @@ Commands for [StartUpWinner](https://start-up-winner.vercel.app), the dashboard 
 | `/startupwinner:research` | Researches competitors on the web for the Market tab |
 | `/startupwinner:launch` | Writes ready-to-paste launch copy for Product Hunt, Show HN, Reddit and more into `.startupwinner/launch/` |
 | `/startupwinner:next` | Works through the checklist on its own and stops only for what needs you, with a step-by-step guide for each stop (accounts, keys, store consoles, decisions) |
+| `/startupwinner:plan` | Plans the build before coding: an interview, a spec with a check per step, the data model and access rules, verification |
+| `/startupwinner:qa` | Clicks through the product like a real user before launch and fixes what breaks, a failing test first |
+| `/startupwinner:security` | Checks the holes that leak data in AI-built apps and fixes the clear ones |
+| `/startupwinner:speed` | Measures, fixes what users feel, and measures again |
 | `/startupwinner:focus` | Agrees the one priority for this week with you, from the dashboard's numbers, and records it |
 
 None of them pushes or posts anything; they show you the diff first.
