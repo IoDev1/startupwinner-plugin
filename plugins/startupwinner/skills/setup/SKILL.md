@@ -106,6 +106,7 @@ competitors:
   - name: Example
     url: https://example.com
     pricing: "Free; Pro $8/mo"             # their actual public prices
+    revenue_model: subscription            # how they make money: subscription, one-time, ads, sponsors, donations, paid hosting, marketplace fees, none
     audience: who it's for, in a few words
     features: [feature one, feature two]   # the 3 to 6 that matter for this comparison
     strengths: what they do better than us
