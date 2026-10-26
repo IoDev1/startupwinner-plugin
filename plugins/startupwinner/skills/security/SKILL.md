@@ -28,7 +28,7 @@ Do not commit or push: when you're done, show me the diff and the summary.
 1. **Every table has row-level access rules, and they're right: RLS on for every exposed table, `USING` and `WITH CHECK` on updates, a null-safe `auth.uid()`, no `using (true)` on private data (or the equivalent for your database).** Why: missing or wrong RLS exposed about 1 in 10 scanned Lovable apps (CVE-2025-48757).
 2. **Probe with the public key and a second user's session against every table, function and storage bucket: expect denial.** Why: it tests behaviour, not just that a rule exists.
 3. **No secret in the browser: check every `NEXT_PUBLIC_` (or other client-exposed) variable and the built client files for keys; admin or service keys only in server code.** Why: admin keys skip every access rule.
-4. **No secrets in git history: run gitleaks or trufflehog if you can, and check `.env*` is ignored.** Why: leaked keys stay valid for years. *Needs you:* rotate anything found.
+4. **No secrets in git history: run gitleaks or trufflehog over every commit if you can (deleted keys are still in history), and check `.env*` is ignored.** Why: leaked keys stay valid for years. *Needs you:* replace (rotate) any key found, and turn on GitHub secret scanning and push protection (repository Settings → Advanced Security) so a key is blocked before it's pushed.
 5. **Authorization is checked inside every server action, API route and data function, not only in middleware or the page.** Why: CVE-2025-29927 let requests skip Next.js middleware entirely.
 6. **The framework and dependencies are patched: `pnpm audit` / `npm audit` has no high or critical issues.** Why: known holes are the cheapest to exploit.
 7. **Every dependency is real: new packages exist, have a history, are spelled right, and the lockfile is committed.** Why: AI models invent package names, and attackers register them (slopsquatting).
@@ -45,7 +45,7 @@ Do not commit or push: when you're done, show me the diff and the summary.
 For every check that needs a person, write `.startupwinner/guides/security-<number>.md` with: what and why (two lines), numbered steps with exact links and clicks, which key with the smallest access and where it goes (never this chat, never the code), how to see it worked, and what you'll do next. Then carry on with the other checks.
 
 ## When you're done
-Write `.startupwinner/security.md`: today's date, then one line per check: ✅ passed (with the evidence), 🔧 fixed (what changed), ⚠️ needs you (the guide), or — skipped (why). If a methodology item in `.startupwinner/checklist.md` is now proven (for example `prelaunch.error_tracking` or `prelaunch.legal`), tick it with the evidence. Then show me the summary, the guides waiting for me, and the diff.
+Write `.startupwinner/security.md`: today's date, then one line per check: ✅ passed (with the evidence), 🔧 fixed (what changed), ⚠️ needs you (the guide), or — skipped (why). If a methodology item in `.startupwinner/checklist.md` is now proven (for example `prelaunch.error_tracking` or `prelaunch.legal`), tick it with the evidence. Tick `prelaunch.security_check` only when no critical or high finding is left open, with "security.md, YYYY-MM-DD" as the evidence; otherwise mark it `[~]` with what's left. Then show me the summary, the guides waiting for me, and the diff.
 
 ## Never
 - Never ask me to paste a password, key or token into this chat, never write one into a file, never print an environment variable's value.

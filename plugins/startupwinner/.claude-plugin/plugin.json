@@ -1,6 +1,6 @@
 {
   "name": "startupwinner",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Start a new product from the starter (/startupwinner:new), set up a repo for the StartUpWinner dashboard (/startupwinner:setup), research its competitors (/startupwinner:research), write its launch kit (/startupwinner:launch), pick the week's focus (/startupwinner:focus), work through the checklist until it needs you (/startupwinner:next), and run the expert playbooks: plan, qa, security, speed",
   "author": {
     "name": "IoDev1"

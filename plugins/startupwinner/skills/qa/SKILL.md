@@ -45,7 +45,7 @@ Do not commit or push: when you're done, show me the diff and the summary.
 For every check that needs a person, write `.startupwinner/guides/qa-<number>.md` with: what and why (two lines), numbered steps with exact links and clicks, which key with the smallest access and where it goes (never this chat, never the code), how to see it worked, and what you'll do next. Then carry on with the other checks.
 
 ## When you're done
-Write `.startupwinner/qa.md`: today's date, then one line per check: ✅ passed (with the evidence), 🔧 fixed (what changed), ⚠️ needs you (the guide), or — skipped (why). If a methodology item in `.startupwinner/checklist.md` is now proven (for example `prelaunch.error_tracking` or `prelaunch.legal`), tick it with the evidence. Then show me the summary, the guides waiting for me, and the diff.
+Write `.startupwinner/qa.md`: today's date, then one line per check: ✅ passed (with the evidence), 🔧 fixed (what changed), ⚠️ needs you (the guide), or — skipped (why). If a methodology item in `.startupwinner/checklist.md` is now proven (for example `prelaunch.error_tracking` or `prelaunch.legal`), tick it with the evidence. Tick `prelaunch.qa_pass` only when every check that applies passed (fixed counts), with "qa.md, YYYY-MM-DD" as the evidence; otherwise mark it `[~]` with what's left. Then show me the summary, the guides waiting for me, and the diff.
 
 ## Never
 - Never ask me to paste a password, key or token into this chat, never write one into a file, never print an environment variable's value.

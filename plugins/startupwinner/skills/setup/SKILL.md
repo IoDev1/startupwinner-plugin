@@ -173,6 +173,8 @@ prelaunch
 - `prelaunch.account_deletion`: Users can delete their account (Apple requires this in-app if accounts exist)
 - `prelaunch.landing`: Landing page: promise, pricing, call to action [dashboard checks]
 - `prelaunch.backups`: Database backups on [ask me]
+- `prelaunch.security_check`: Security check passed: /startupwinner:security with no critical or high findings left open
+- `prelaunch.qa_pass`: Tested like a real user: /startupwinner:qa flows pass on a preview deploy (sign-up, data isolation, payments in test mode, errors, mobile)
 
 ship
 - `web.production`: Production deploy on the custom domain (web only) [dashboard checks]

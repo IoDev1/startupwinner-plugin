@@ -25,6 +25,8 @@ Do not commit or push: when you stop, show me the diff and a short summary.
 - Check it: run the build, the tests and the linter if the project has them; for a page, run it and look.
 - Tick it in `.startupwinner/checklist.md`: `[x]` with the evidence after the title (the file or the check that proves it). Half done: `[~]` with what's left.
 
+**A playbook does it** for `prelaunch.security_check` and `prelaunch.qa_pass`: each is a whole run of its own (`/startupwinner:security`, `/startupwinner:qa`). Don't do them inside this run; list them at the end as the next command to run, security first.
+
 **I do it** when it needs a person: creating an account, accepting terms, paying, getting or pasting an API key, anything in a store console (App Store Connect, Google Play), DNS and domains, legal choices, talking to users, and every decision about the product (pricing, the differentiator, launch channels).
 - Don't try to do these yourself and don't stop at the first one: write the guide (step 3), then carry on with the items you can do.
 
