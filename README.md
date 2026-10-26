@@ -8,6 +8,7 @@ Commands for [StartUpWinner](https://start-up-winner.vercel.app), the dashboard 
 | `/startupwinner:setup` | Sets up the current repo: interviews you and writes everything in `.startupwinner/` (project file, checklist, rules, competitors), plus one line in `CLAUDE.md` |
 | `/startupwinner:research` | Researches competitors on the web for the Market tab |
 | `/startupwinner:launch` | Writes ready-to-paste launch copy for Product Hunt, Show HN, Reddit and more into `.startupwinner/launch/` |
+| `/startupwinner:next` | Works through the checklist on its own and stops only for what needs you, with a step-by-step guide for each stop (accounts, keys, store consoles, decisions) |
 | `/startupwinner:focus` | Agrees the one priority for this week with you, from the dashboard's numbers, and records it |
 
 None of them pushes or posts anything; they show you the diff first.
