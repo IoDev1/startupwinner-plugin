@@ -131,6 +131,16 @@ Write `.startupwinner/CLAUDE.md`, short, for any agent working in this repositor
 
 Then make sure the root `CLAUDE.md` loads it: if the line `@.startupwinner/CLAUDE.md` isn't there, add exactly that one line at the end (create the file with just that line if there is none). Change nothing else in it.
 
+## 8. Offer the dashboard connection (last, after the diff)
+
+The dashboard can answer you directly over MCP (read-only): what's late, what's next, the numbers. If you are Claude Code, check with `claude mcp list` whether `startupwinner` is already connected; if it is, say so and skip this step. Otherwise end your message with these steps for me, as they are:
+
+1. Commit and push, so the dashboard reads the new files.
+2. Open https://start-up-winner.vercel.app/settings/agents, create a token, and run the `claude mcp add` command it shows in a terminal (once per computer, not per project).
+3. Restart Claude Code; from then on you can ask me "what should I do today?" in any project.
+
+Never ask me to paste the token into this chat: the command keeps it in Claude Code's settings.
+
 ## Methodology items
 
 idea
