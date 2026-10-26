@@ -35,11 +35,12 @@ Do not commit or push: when you're done, show me the diff and the summary.
 8. **Empty states on every list and dashboard, and the first-run experience.** Why: a new user always sees the empty version first.
 9. **Error states: a 404 page, a 500 page, an API failure, a slow network.** Why: unhandled errors are now on OWASP's top 10.
 10. **A phone-sized screen: navigation, forms and checkout.** Why: many first visits come from phones through social links.
-11. **Navigation: every link, the back button after an action, reloading, opening a deep link while logged out (to the login, then back).** Why: state often breaks after navigating.
-12. **Email links: verification, password reset, unsubscribe (one click, works logged out).** Why: a common break, and unsubscribe is required by law for marketing email.
-13. **No errors in the browser console or failed network requests on the key pages.** Why: a cheap signal of hidden failures.
-14. **Whatever changed recently, and the flows next to it.** Why: regressions hide next to the change.
-15. **A fresh review: a separate subagent checks the diff and the QA evidence against the spec or checklist.** Why: whoever wrote the code shouldn't grade it.
+11. **If `.startupwinner/design.md` exists, the key pages follow it: its colours, fonts and components, in light and dark, on desktop and phone.** Why: inconsistent screens look unfinished and cost trust.
+12. **Navigation: every link, the back button after an action, reloading, opening a deep link while logged out (to the login, then back).** Why: state often breaks after navigating.
+13. **Email links: verification, password reset, unsubscribe (one click, works logged out).** Why: a common break, and unsubscribe is required by law for marketing email.
+14. **No errors in the browser console or failed network requests on the key pages.** Why: a cheap signal of hidden failures.
+15. **Whatever changed recently, and the flows next to it.** Why: regressions hide next to the change.
+16. **A fresh review: a separate subagent checks the diff and the QA evidence against the spec or checklist.** Why: whoever wrote the code shouldn't grade it.
 
 ## When something needs me
 For every check that needs a person, write `.startupwinner/guides/qa-<number>.md` with: what and why (two lines), numbered steps with exact links and clicks, which key with the smallest access and where it goes (never this chat, never the code), how to see it worked, and what you'll do next. Then carry on with the other checks.

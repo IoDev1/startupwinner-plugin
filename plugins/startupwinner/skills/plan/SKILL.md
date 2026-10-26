@@ -1,6 +1,6 @@
 ---
 name: plan
-description: "Plan the build before coding: interview, a spec with checks per step, the data model and access rules, verification and analytics, in .startupwinner/. Expert-backed, never commits."
+description: "Plan the build before coding: interview, a spec with checks per step, the data model and access rules, a design file for the look, verification and analytics, in .startupwinner/. Expert-backed, never commits."
 disable-model-invocation: true
 ---
 
@@ -19,7 +19,7 @@ Do not commit or push: when you're done, show me the diff and the summary.
 
 ## Rules
 - Interview me first, in ONE message with all your questions, then wait. Draft answers from the repository where you can, so I only confirm.
-- Write the plan in `.startupwinner/spec.md` (create or update it) and the checks in `.startupwinner/checklist.md`. Don't create PRD/ARCHITECTURE/RULES/TASKS files: the spec, the checklist and a short `.startupwinner/CLAUDE.md` cover them.
+- Write the plan in `.startupwinner/spec.md` (create or update it), the checks in `.startupwinner/checklist.md`, and, for an app with a real interface, `.startupwinner/design.md`. Don't create PRD/ARCHITECTURE/RULES/TASKS/PROGRESS files: the spec, the checklist, the design file and a short `.startupwinner/CLAUDE.md` cover them.
 - Don't write product code in this run: the plan is the deliverable.
 
 ## The checks
@@ -30,12 +30,13 @@ Do not commit or push: when you're done, show me the diff and the summary.
 5. **Every feature broken into small steps, each with a pass/fail check, in the checklist.** Why: a check per step stops the agent from calling things done too early.
 6. **Payments in the first version, in the provider's test mode.** Why: people paying is the validation that counts. *Needs you:* create the payment account and test keys.
 7. **A data model where every user-owned row has an owner (user_id or org_id), with access rules (for Supabase, RLS policies) planned before any table.** Why: broken access control is the main way AI-built apps leak data.
-8. **A short `.startupwinner/CLAUDE.md`: run, test and build commands, rules that differ from the defaults, key decisions, gotchas; nothing the code already says.** Why: a long rules file gets ignored.
-9. **One command to start the app and one to run the tests, written in the spec.** Why: every session should start by running the app and the tests.
-10. **Verification set up: tests run, typecheck, lint and build pass, and one end-to-end check of the core job is planned.** Why: giving the agent a way to check its own work is the biggest quality lever.
-11. **Rules that must always hold (format after edits, never touch .env or applied migrations) proposed as Claude Code hooks.** Why: hooks always run; written rules are only advice. *Needs you:* approve any change to the project's settings.
-12. **1 or 2 launch channels and the analytics events (sign-up, the core job done, payment).** Why: few channels done well beat many, and you can't improve what you don't measure. *Needs you:* pick the channels.
-13. **Work one checklist step at a time and commit after each, noting progress in the checklist.** Why: sessions forget; git history and the checklist don't.
+8. **For an app with a real interface, a short `.startupwinner/design.md`: colours, fonts, spacing and radius as tokens, the core components and their states (button, input, card, empty, loading, error), light and dark, and 3 to 5 rules (for example "one primary button per screen"); taken from the existing styles when there are any, written as tokens and rules, not prose.** Why: without it the agent invents a new look on every screen. *Needs you:* confirm the look, or point to a site you like.
+9. **A short `.startupwinner/CLAUDE.md`: run, test and build commands, rules that differ from the defaults, key decisions, gotchas; nothing the code already says.** Why: a long rules file gets ignored.
+10. **One command to start the app and one to run the tests, written in the spec.** Why: every session should start by running the app and the tests.
+11. **Verification set up: tests run, typecheck, lint and build pass, and one end-to-end check of the core job is planned.** Why: giving the agent a way to check its own work is the biggest quality lever.
+12. **Rules that must always hold (format after edits, never touch .env or applied migrations) proposed as Claude Code hooks.** Why: hooks always run; written rules are only advice. *Needs you:* approve any change to the project's settings.
+13. **1 or 2 launch channels and the analytics events (sign-up, the core job done, payment).** Why: few channels done well beat many, and you can't improve what you don't measure. *Needs you:* pick the channels.
+14. **Work one checklist step at a time and commit after each, noting progress in the checklist.** Why: sessions forget; git history and the checklist don't.
 
 ## When something needs me
 For every check that needs a person, write `.startupwinner/guides/plan-<number>.md` with: what and why (two lines), numbered steps with exact links and clicks, which key with the smallest access and where it goes (never this chat, never the code), how to see it worked, and what you'll do next. Then carry on with the other checks.
