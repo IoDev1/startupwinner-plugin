@@ -17,6 +17,14 @@ Commands for [StartUpWinner](https://start-up-winner.vercel.app), the dashboard 
 
 None of them pushes or posts anything; they show you the diff first.
 
+## Built from expert practice
+
+The commands are built from published guidance (Anthropic's Claude Code docs, OWASP, web.dev, and builders who wrote up what worked), each tip checked against its source before it goes in. What holds up stays, what's half right gets fixed, and the rest is left out. Nobody on that list endorses StartUpWinner.
+
+- **Better work:** the tests and build run first, a fresh subagent reviews the diff and its findings are checked before they're accepted, and QA clicks through like a real user.
+- **Fewer wasted tokens:** up to 5 items a run, no looping on a fix that failed twice, reviews that report only what blocks a merge, and speed work that measures first.
+- **Easy to read back:** every run ends with *Blocked on me*, *Changed* and *Found*.
+
 ## Install
 
 ```bash
