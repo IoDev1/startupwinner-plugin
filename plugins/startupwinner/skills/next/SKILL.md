@@ -18,6 +18,8 @@ Do not commit or push: when you stop, show me the diff and a short summary.
 - Run the tests and the build first (and the linter if there is one), so you know the baseline and how the project runs. Something already broken? Say so; don't hide it under new work.
 - Work in this order: late items first, then the current stage's open items from top to bottom, then the next stage's. Skip items marked `blocked=` or `skipped=`, and `validate.opportunity_score` (the dashboard computes it).
 - At most 5 items this run, unless I said otherwise when I started you: each item costs time and tokens, and I review between runs.
+- The checklist is your memory for this run: on a long run the conversation gets compacted, so re-read `.startupwinner/checklist.md` before each item instead of trusting what you remember. If you find work that isn't on it, note it for the end (step 5).
+- Don't stop between items to report progress or ask whether to go on: keep going until one of the stops in step 5.
 
 ## 2. For each item, decide who does it
 
@@ -46,14 +48,16 @@ Decisions get a guide too, with 2 or 3 options and what each one means for the p
 
 ## 4. Review before you show me
 
-If you can start a subagent, have a fresh one review the diff against the items you ticked, reporting only real bugs and missing requirements. Fix what it finds, or list it.
+If you can start a subagent, have a fresh one review the diff against the items you ticked. Ask only for problems that should block merging, each with the file and line, why it's wrong, and how to show it fails.
+
+Check its evidence before you accept a finding: open the file and line, and run the failing case if you can. Fix the findings that hold up, or list them; drop the ones that don't, with a word on why.
 
 ## 5. When you stop
 
-Stop when you've done 5 items, or when every open item needs me. Then show me:
-- what you did, item by item, with how you checked it;
-- the guides waiting for me, most urgent first, each with its file and the one-line "what and why";
-- the diff, for me to review and commit.
+Stop when you've done 5 items, or when every open item needs me. Then report under these three headings, in this order (I read the first one first):
+- **Blocked on me:** the guides waiting for me, most urgent first, each with its file and the one-line "what and why", then the playbook to run next if one is due.
+- **Changed:** what you did, item by item, with how you checked it, then the diff for me to review and commit.
+- **Found:** what you noticed but didn't fix: a broken baseline, review findings left open, work that isn't on the checklist. Write "nothing" if there's nothing.
 
 When I come back and say a guide is done, check what you can (the variable is used, the page answers, the build passes), tick the item with "done, per you, YYYY-MM-DD" when only I can see it, and continue from step 1.
 

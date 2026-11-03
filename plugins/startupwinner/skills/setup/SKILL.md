@@ -129,6 +129,7 @@ Write `.startupwinner/CLAUDE.md` for any agent working in this repository. Keep 
 - what the product is, for whom, and the stage (one paragraph, from project.yaml and idea.md);
 - the stack and where things are (from what you read);
 - "The StartUpWinner checklist is .startupwinner/checklist.md: when you finish something on it, tick it there with the evidence. Never edit TODO.md's lines for StartUpWinner.";
+- "When to stop: keep going until the task is done; don't stop just to report progress. Stop for a product decision, an account, a key, a payment, or anything that deletes data or can't be undone. End with: Blocked on me, Changed, Found.";
 - anything the repository already asks of agents (an existing CLAUDE.md, AGENTS.md or contributing guide): point to it, don't copy it.
 
 Then make sure the root `CLAUDE.md` loads it: if the line `@.startupwinner/CLAUDE.md` isn't there, add exactly that one line at the end (create the file with just that line if there is none). Change nothing else in it.
