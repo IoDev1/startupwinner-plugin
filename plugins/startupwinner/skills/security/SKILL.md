@@ -13,7 +13,7 @@ Find the holes that actually leak data in AI-built apps, and close them. The che
 Do not commit or push: when you're done, show me the diff and the summary.
 
 ## Before you start
-- Read `.startupwinner/project.yaml`, `.startupwinner/checklist.md`, `.startupwinner/CLAUDE.md` and the README to learn the product, the platforms and how to run it. TODO.md is mine: read it, never edit it.
+- Read `.startupwinner/project.yaml`, `.startupwinner/checklist.md`, `.startupwinner/CLAUDE.md`, `.startupwinner/lessons.md` if there is one (what earlier runs learned: follow it) and the README to learn the product, the platforms and how to run it. TODO.md is mine: read it, never edit it.
 - Skip checks that don't apply (no payments yet, no database, no web app) and say why in one line.
 - At most 8 fixes this run, unless I said otherwise: each one costs time and tokens, and I review between runs.
 
@@ -45,7 +45,7 @@ Do not commit or push: when you're done, show me the diff and the summary.
 For every check that needs a person, write `.startupwinner/guides/security-<number>.md` with: what and why (two lines), numbered steps with exact links and clicks, which key with the smallest access and where it goes (never this chat, never the code), how to see it worked, and what you'll do next. Then carry on with the other checks.
 
 ## When you're done
-Write `.startupwinner/security.md`: today's date, then one line per check: ✅ passed (with the evidence), 🔧 fixed (what changed), ⚠️ needs you (the guide), or — skipped (why). If a methodology item in `.startupwinner/checklist.md` is now proven (for example `prelaunch.error_tracking` or `prelaunch.legal`), tick it with the evidence. Tick `prelaunch.security_check` only when no critical or high finding is left open, with "security.md, YYYY-MM-DD" as the evidence; otherwise mark it `[~]` with what's left. Then report under three headings, in this order: **Blocked on me** (the guides waiting for me), **Changed** (what you fixed and how you checked it, then the diff), **Found** (what's still open, worst first, or "nothing").
+Write `.startupwinner/security.md`: today's date, then one line per check: ✅ passed (with the evidence), 🔧 fixed (what changed), ⚠️ needs you (the guide), or — skipped (why). If a methodology item in `.startupwinner/checklist.md` is now proven (for example `prelaunch.error_tracking` or `prelaunch.legal`), tick it with the evidence. Tick `prelaunch.security_check` only when no critical or high finding is left open, with "security.md, YYYY-MM-DD" as the evidence; otherwise mark it `[~]` with what's left. Add any rule a later run would get wrong without it to `.startupwinner/lessons.md` (one line each, under 20 lines in all). Then report under three headings, in this order: **Blocked on me** (the guides waiting for me), **Changed** (what you fixed and how you checked it, then the diff), **Found** (what's still open, worst first, or "nothing").
 
 ## Never
 - Never ask me to paste a password, key or token into this chat, never write one into a file, never print an environment variable's value.
