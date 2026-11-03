@@ -46,7 +46,7 @@ For each item that needs me, write `.startupwinner/guides/<item id>.md` (create 
 4. **Done when:** how I can see it worked (a page, a green check, a test email).
 5. **What you'll do next** once I say it's done.
 
-Decisions get a guide too, with 2 or 3 options and what each one means for the project; recommend one.
+Decisions get a guide too, with 2 or 3 options and what each one means for the project; recommend one. Then argue against your own pick: the strongest case for not doing it, and the 3 most likely ways it fails, so I decide with both sides in front of me.
 
 ## 4. Review before you show me
 
